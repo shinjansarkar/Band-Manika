@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Music2, X } from "lucide-react";
+import { X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -32,8 +33,9 @@ const Header = () => {
     >
       <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center gap-2 sm:gap-3 cursor-pointer" onClick={() => scrollToSection("home")}>
-          <Music2 className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
-          <span className="text-xl sm:text-2xl font-display font-bold text-primary">Singer Manika</span>
+          <img src={logo} alt="Manika logo" className="w-12 h-20 sm:w-20 sm:h-14 object-contain" />
+          <span className="block sm:inline text-xl sm:text-2xl font-display font-bold text-primary">Manika</span>
+          <span className="block sm:inline text-base sm:text-xl font-display font-bold text-primary">ও বন্ধুরা</span>
         </div>
 
         <ul className="hidden lg:flex items-center gap-6 xl:gap-8 font-body text-sm">

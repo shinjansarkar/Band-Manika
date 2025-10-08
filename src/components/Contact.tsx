@@ -19,7 +19,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 px-4 relative overflow-hidden">
+  <section id="contact" className="py-12 px-4 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 folk-pattern opacity-10" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
@@ -34,7 +34,7 @@ const Contact = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
-          {/* Contact Form */}
+          {/* Contact Form
           <div className="animate-slide-in">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
@@ -77,7 +77,7 @@ const Contact = () => {
                 Send Message
               </Button>
             </form>
-          </div>
+          </div> */}
 
           {/* Contact Info */}
           <div className="space-y-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>

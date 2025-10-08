@@ -11,13 +11,13 @@ const galleryItems = [
 
 const Gallery = () => {
   return (
-    <section id="gallery" className="py-24 px-4 bg-secondary/50 relative overflow-hidden">
+  <section id="gallery" className="py-12 px-4 bg-secondary/50 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 folk-pattern opacity-5" />
 
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="text-center mb-12 sm:mb-16 animate-fade-in">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-primary mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-primary mb-3">
             Gallery
           </h2>
           <p className="text-base sm:text-lg text-foreground/70 font-body px-4">Moments captured on stage and beyond</p>

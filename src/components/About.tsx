@@ -1,6 +1,8 @@
+import aboutImg from "@/assets/about.jpg";
+
 const About = () => {
   return (
-    <section id="about" className="py-24 px-4 relative overflow-hidden">
+  <section id="about" className="py-12 px-4 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 folk-pattern opacity-10" />
       <div className="absolute top-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
@@ -8,7 +10,7 @@ const About = () => {
 
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="text-center mb-12 sm:mb-16 animate-fade-in">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-primary mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-primary mb-3">
             About Us
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto" />
@@ -50,11 +52,7 @@ const About = () => {
           <div className="relative animate-fade-in" style={{ animationDelay: "0.3s" }}>
             <div className="relative overflow-hidden rounded-lg border-4 border-primary/40 hover-lift">
               <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <p className="text-6xl mb-4">🎵</p>
-                  <p className="text-xl font-display text-primary">Live Performance</p>
-                  <p className="text-sm text-foreground/60 mt-2">Image Coming Soon</p>
-                </div>
+                <img src={aboutImg} alt="About Manika" className="w-full h-full object-cover" />
               </div>
               <div className="absolute inset-0 border-glow pointer-events-none" />
             </div>

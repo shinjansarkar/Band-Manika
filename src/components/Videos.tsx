@@ -43,7 +43,7 @@ const Videos = () => {
   const [selectedVideo, setSelectedVideo] = useState(videos[0]);
 
   return (
-    <section id="videos" className="py-24 px-4 relative overflow-hidden">
+  <section id="videos" className="py-12 px-4 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 folk-pattern opacity-10" />
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
@@ -51,7 +51,7 @@ const Videos = () => {
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="text-center mb-12 sm:mb-16 animate-fade-in">
           <p className="text-lg sm:text-xl font-display text-gold italic mb-2">Featured</p>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-primary mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-primary mb-3">
             VIDEOS
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto" />

@@ -29,14 +29,14 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <section id="team" className="py-24 px-4 relative overflow-hidden">
+  <section id="team" className="py-12 px-4 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 folk-pattern opacity-10" />
       <div className="absolute top-20 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
 
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="text-center mb-12 sm:mb-16 animate-fade-in">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-primary mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-primary mb-3">
             Meet the Band
           </h2>
           <p className="text-base sm:text-lg text-foreground/70 font-body px-4">The voices and souls behind Singer Manika</p>
