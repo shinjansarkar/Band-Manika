@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import { Music2 } from "lucide-react";
+import { Music2, X } from "lucide-react";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,6 +18,7 @@ const Header = () => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
+      setMobileMenuOpen(false);
     }
   };
 
@@ -29,13 +31,13 @@ const Header = () => {
       }`}
     >
       <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-3 cursor-pointer" onClick={() => scrollToSection("home")}>
-          <Music2 className="w-8 h-8 text-primary" />
-          <span className="text-2xl font-display font-bold text-primary">Singer Manika</span>
+        <div className="flex items-center gap-2 sm:gap-3 cursor-pointer" onClick={() => scrollToSection("home")}>
+          <Music2 className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
+          <span className="text-xl sm:text-2xl font-display font-bold text-primary">Singer Manika</span>
         </div>
 
-        <ul className="hidden md:flex items-center gap-8 font-body text-sm">
-          {["home", "about", "performances", "team", "gallery", "contact"].map((item) => (
+        <ul className="hidden lg:flex items-center gap-6 xl:gap-8 font-body text-sm">
+          {["home", "about", "performances", "team", "gallery", "videos", "contact"].map((item) => (
             <li key={item}>
               <button
                 onClick={() => scrollToSection(item)}
@@ -48,12 +50,40 @@ const Header = () => {
           ))}
         </ul>
 
-        <button className="md:hidden text-primary">
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
+        <button 
+          className="lg:hidden text-primary z-50"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+          {mobileMenuOpen ? (
+            <X className="w-6 h-6" />
+          ) : (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          )}
         </button>
       </nav>
+
+      {/* Mobile Menu */}
+      <div
+        className={`lg:hidden fixed inset-0 bg-background/98 backdrop-blur-md transition-all duration-300 ${
+          mobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+        style={{ top: "72px" }}
+      >
+        <ul className="flex flex-col items-center justify-center h-full gap-8 font-body text-lg">
+          {["home", "about", "performances", "team", "gallery", "videos", "contact"].map((item) => (
+            <li key={item}>
+              <button
+                onClick={() => scrollToSection(item)}
+                className="text-foreground hover:text-primary transition-colors duration-300 capitalize"
+              >
+                {item}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
     </header>
   );
 };

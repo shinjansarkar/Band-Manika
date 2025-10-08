@@ -29,35 +29,35 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto animate-fade-in">
-        <div className="mb-6 inline-block">
-          <Music className="w-20 h-20 text-primary animate-glow-pulse" />
+        <div className="mb-4 sm:mb-6 inline-block">
+          <Music className="w-16 h-16 sm:w-20 sm:h-20 text-primary animate-glow-pulse" />
         </div>
 
-        <h1 className="text-6xl md:text-8xl font-display font-bold mb-6 text-glow">
+        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold mb-4 sm:mb-6 text-glow">
           Singer Manika
         </h1>
 
-        <p className="text-2xl md:text-3xl font-display text-gold mb-4 italic">
+        <p className="text-xl sm:text-2xl md:text-3xl font-display text-gold mb-3 sm:mb-4 italic">
           Echoes of Bengal
         </p>
 
-        <p className="text-lg md:text-xl text-foreground/80 mb-12 max-w-2xl mx-auto font-body font-light">
+        <p className="text-base sm:text-lg md:text-xl text-foreground/80 mb-8 sm:mb-12 max-w-2xl mx-auto font-body font-light px-4">
           Folk Songs That Touch the Soul
         </p>
 
-        <div className="flex gap-4 justify-center flex-wrap">
+        <div className="flex gap-3 sm:gap-4 justify-center flex-wrap px-4">
           <Button 
             size="lg"
-            className="bg-primary hover:bg-accent text-background font-body font-medium px-8 py-6 text-lg border-glow group"
+            className="bg-primary hover:bg-accent text-background font-body font-medium px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg border-glow group"
           >
-            <Play className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
+            <Play className="mr-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform" />
             Listen Now
           </Button>
           
           <Button
             size="lg"
             variant="outline"
-            className="border-2 border-primary text-primary hover:bg-primary hover:text-background font-body font-medium px-8 py-6 text-lg transition-all duration-300"
+            className="border-2 border-primary text-primary hover:bg-primary hover:text-background font-body font-medium px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg transition-all duration-300"
             onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
           >
             Learn More

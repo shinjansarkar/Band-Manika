@@ -25,15 +25,15 @@ const Contact = () => {
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
 
       <div className="container mx-auto max-w-6xl relative z-10">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-5xl md:text-6xl font-display font-bold text-primary mb-4">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-primary mb-4">
             Get in Touch
           </h2>
-          <p className="text-lg text-foreground/70 font-body">We'd love to hear from you</p>
+          <p className="text-base sm:text-lg text-foreground/70 font-body px-4">We'd love to hear from you</p>
           <div className="w-24 h-1 bg-primary mx-auto mt-4" />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
           {/* Contact Form */}
           <div className="animate-slide-in">
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -118,26 +118,26 @@ const Contact = () => {
             </div>
 
             {/* Social Media */}
-            <div className="bg-card border border-primary/30 rounded-lg p-6 hover-lift">
-              <h3 className="font-display text-lg font-semibold text-foreground mb-4">Follow Us</h3>
-              <div className="flex gap-4">
+            <div className="bg-card border border-primary/30 rounded-lg p-4 sm:p-6 hover-lift">
+              <h3 className="font-display text-base sm:text-lg font-semibold text-foreground mb-4">Follow Us</h3>
+              <div className="flex gap-3 sm:gap-4">
                 <a
                   href="#"
-                  className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary hover:text-background transition-all duration-300"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary hover:text-background transition-all duration-300"
                 >
-                  <Facebook className="w-5 h-5" />
+                  <Facebook className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
                 <a
                   href="#"
-                  className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary hover:text-background transition-all duration-300"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary hover:text-background transition-all duration-300"
                 >
-                  <Instagram className="w-5 h-5" />
+                  <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
                 <a
                   href="#"
-                  className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary hover:text-background transition-all duration-300"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary hover:text-background transition-all duration-300"
                 >
-                  <Youtube className="w-5 h-5" />
+                  <Youtube className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
               </div>
             </div>

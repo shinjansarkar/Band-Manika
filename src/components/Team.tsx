@@ -35,15 +35,15 @@ const Team = () => {
       <div className="absolute top-20 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
 
       <div className="container mx-auto max-w-6xl relative z-10">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-5xl md:text-6xl font-display font-bold text-primary mb-4">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-primary mb-4">
             Meet the Band
           </h2>
-          <p className="text-lg text-foreground/70 font-body">The voices and souls behind Singer Manika</p>
+          <p className="text-base sm:text-lg text-foreground/70 font-body px-4">The voices and souls behind Singer Manika</p>
           <div className="w-24 h-1 bg-primary mx-auto mt-4" />
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {teamMembers.map((member, index) => (
             <div
               key={index}

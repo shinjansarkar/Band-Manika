@@ -13,13 +13,13 @@ const Footer = () => {
       {/* Folk Pattern Border */}
       <div className="absolute top-0 left-0 right-0 h-2 folk-pattern opacity-50" />
 
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-3 gap-12">
+      <div className="container mx-auto px-4 py-8 sm:py-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <Music2 className="w-8 h-8 text-primary" />
-              <span className="text-2xl font-display font-bold text-primary">Singer Manika</span>
+            <div className="flex items-center gap-2 sm:gap-3 mb-4">
+              <Music2 className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
+              <span className="text-xl sm:text-2xl font-display font-bold text-primary">Singer Manika</span>
             </div>
             <p className="text-foreground/70 font-body text-sm leading-relaxed">
               Preserving and celebrating Bengali folk music traditions. Bringing the soul of rural Bengal 
@@ -29,9 +29,9 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-display font-semibold text-foreground mb-4">Quick Links</h3>
-            <ul className="space-y-2 font-body">
-              {["home", "about", "performances", "team", "gallery", "contact"].map((item) => (
+            <h3 className="text-lg sm:text-xl font-display font-semibold text-foreground mb-4">Quick Links</h3>
+            <ul className="space-y-2 font-body text-sm sm:text-base">
+              {["home", "about", "performances", "team", "gallery", "videos", "contact"].map((item) => (
                 <li key={item}>
                   <button
                     onClick={() => scrollToSection(item)}
@@ -45,8 +45,8 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div>
-            <h3 className="text-xl font-display font-semibold text-foreground mb-4">Contact</h3>
+          <div className="sm:col-span-2 lg:col-span-1">
+            <h3 className="text-lg sm:text-xl font-display font-semibold text-foreground mb-4">Contact</h3>
             <ul className="space-y-2 text-foreground/70 font-body text-sm">
               <li>Kolkata, West Bengal</li>
               <li>India</li>

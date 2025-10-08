@@ -16,16 +16,16 @@ const Gallery = () => {
       <div className="absolute inset-0 folk-pattern opacity-5" />
 
       <div className="container mx-auto max-w-7xl relative z-10">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-5xl md:text-6xl font-display font-bold text-primary mb-4">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-primary mb-4">
             Gallery
           </h2>
-          <p className="text-lg text-foreground/70 font-body">Moments captured on stage and beyond</p>
+          <p className="text-base sm:text-lg text-foreground/70 font-body px-4">Moments captured on stage and beyond</p>
           <div className="w-24 h-1 bg-primary mx-auto mt-4" />
         </div>
 
         {/* Masonry Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[200px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 auto-rows-[180px] sm:auto-rows-[200px]">
           {galleryItems.map((item, index) => (
             <div
               key={item.id}
