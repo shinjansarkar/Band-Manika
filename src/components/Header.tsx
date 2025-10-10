@@ -31,11 +31,13 @@ const Header = () => {
           : "bg-transparent"
       }`}
     >
-      <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-2 sm:gap-3 cursor-pointer" onClick={() => scrollToSection("home")}>
-          <img src={logo} alt="Manika logo" className="w-12 h-20 sm:w-20 sm:h-14 object-contain" />
-          <span className="block sm:inline text-xl sm:text-2xl font-display font-bold text-primary">Manika</span>
-          <span className="block sm:inline text-base sm:text-xl font-display font-bold text-primary">ও বন্ধুরা</span>
+      <nav className="container mx-auto mobile-px py-3 sm:py-4 flex items-center justify-between mobile-safe-area">
+        <div className="flex items-center gap-2 sm:gap-3 cursor-pointer mobile-touch-target" onClick={() => scrollToSection("home")}>
+          <img src={logo} alt="Manika logo" className="w-10 h-16 sm:w-12 sm:h-20 lg:w-20 lg:h-14 object-contain" />
+          <div className="flex flex-col sm:flex-row sm:items-center gap-0 sm:gap-1">
+            <span className="text-lg sm:text-xl lg:text-2xl font-display font-bold text-primary">Manika</span>
+            <span className="text-base font-display font-bold text-primary">ও বন্ধুরা</span>
+          </div>
         </div>
 
         <ul className="hidden lg:flex items-center gap-6 xl:gap-8 font-body text-sm">
@@ -53,8 +55,9 @@ const Header = () => {
         </ul>
 
         <button 
-          className="lg:hidden text-primary z-50"
+          className="lg:hidden text-primary z-50 mobile-touch-target p-2"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle mobile menu"
         >
           {mobileMenuOpen ? (
             <X className="w-6 h-6" />
@@ -68,17 +71,17 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden fixed inset-0 bg-background/98 backdrop-blur-md transition-all duration-300 ${
+        className={`lg:hidden fixed inset-0 bg-background/98 backdrop-blur-md transition-all duration-300 mobile-safe-area ${
           mobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
         style={{ top: "72px" }}
       >
-        <ul className="flex flex-col items-center justify-center h-full gap-8 font-body text-lg">
+        <ul className="flex flex-col items-center justify-center h-full gap-6 sm:gap-8 font-body text-lg">
           {["home", "about", "performances", "team", "gallery", "videos", "contact"].map((item) => (
             <li key={item}>
               <button
                 onClick={() => scrollToSection(item)}
-                className="text-foreground hover:text-primary transition-colors duration-300 capitalize"
+                className="text-foreground hover:text-primary transition-colors duration-300 capitalize mobile-touch-target px-4 py-2"
               >
                 {item}
               </button>

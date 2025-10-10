@@ -7,10 +7,28 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: {
+        DEFAULT: "1rem",
+        sm: "1.5rem",
+        lg: "2rem",
+        xl: "2rem",
+        "2xl": "2rem",
+      },
       screens: {
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
         "2xl": "1400px",
       },
+    },
+    screens: {
+      'xs': '475px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
     },
     extend: {
       colors: {
@@ -87,6 +105,21 @@ export default {
         "float": {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-15px)" }
+        },
+        "twinkle": {
+          "0%, 100%": { opacity: "0.3", transform: "scale(1)" },
+          "50%": { opacity: "1", transform: "scale(1.2)" }
+        },
+        "drift": {
+          "0%": { transform: "translateX(0px) translateY(0px)" },
+          "25%": { transform: "translateX(10px) translateY(-5px)" },
+          "50%": { transform: "translateX(-5px) translateY(-10px)" },
+          "75%": { transform: "translateX(-10px) translateY(-5px)" },
+          "100%": { transform: "translateX(0px) translateY(0px)" }
+        },
+        "glow-twinkle": {
+          "0%, 100%": { opacity: "0.4", filter: "brightness(1)" },
+          "50%": { opacity: "0.8", filter: "brightness(1.5)" }
         }
       },
       animation: {
@@ -95,11 +128,16 @@ export default {
         "fade-in": "fade-in 0.6s ease-out",
         "slide-in": "slide-in 0.5s ease-out",
         "glow-pulse": "glow-pulse 2s ease-in-out infinite",
-        "float": "float 3s ease-in-out infinite"
+        "float": "float 3s ease-in-out infinite",
+        "twinkle": "twinkle 2s ease-in-out infinite",
+        "drift": "drift 4s ease-in-out infinite",
+        "glow-twinkle": "glow-twinkle 3s ease-in-out infinite"
       },
       fontFamily: {
         'display': ['Cormorant Garamond', 'serif'],
         'body': ['Poppins', 'sans-serif'],
+        'vintage': ['Cinzel Decorative', 'serif'],
+        'bengali': ['Galada', 'cursive'],
       },
     },
   },
