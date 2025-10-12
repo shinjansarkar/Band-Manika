@@ -24,8 +24,8 @@ const Hero = () => {
         <Star className="absolute top-1/2 right-1/3 w-3 h-3 sm:w-4 sm:h-4 text-primary opacity-30 animate-twinkle" />
       </div>
 
-      {/* Main Content (centered & shifted slightly down) */}
-      <div className="relative z-10 text-center max-w-3xl mx-auto animate-fade-in flex flex-col items-center justify-center gap-3 sm:gap-5 translate-y-8 sm:translate-y-12">
+      {/* Main Content (centered & shifted down) */}
+      <div className="relative z-10 text-center max-w-3xl mx-auto animate-fade-in flex flex-col items-center justify-center gap-3 sm:gap-5 mt-24 sm:mt-32 md:mt-40 lg:mt-48 pt-12 sm:pt-16 md:pt-20">
         {/* Title */}
         <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-vintage font-black text-glow tracking-wider">
           MANIKA
