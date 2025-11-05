@@ -1,28 +1,38 @@
-import { Music, Mic, Drum } from "lucide-react";
-
 const teamMembers = [
   {
     name: "Manika Chatterjee",
     role: "Lead Vocalist",
-    icon: Mic,
+    photo: "src/assets/image.png", // Add your photo here
     description: "Soulful voice that brings folk tales to life",
   },
   {
-    name: "Arijit Das",
-    role: "Dotara Player",
-    icon: Music,
+    name: "Sourav Sasmal",
+    role: "Drummer",
+    photo: "src/assets/1.jpg", // Add Sourav's photo here
     description: "Master of traditional Bengali string instrument",
   },
   {
-    name: "Sudipta Majumdar",
-    role: "Harmonium & Ektara",
-    icon: Music,
+    name: "Soumya Som Roy",
+    role: "Bass Guitarist",
+    photo: "src/assets/2.png", // Add Sudipta's photo here
     description: "Versatile musician with deep folk roots",
   },
   {
-    name: "Ranjit Karmakar",
-    role: "Percussion",
-    icon: Drum,
+    name: "Pritam Pandit",
+    role: "Tabla",
+    photo: "src/assets/3.png", // Add Ranjit's photo here
+    description: "Rhythmic foundation of our ensemble",
+  },
+    {
+    name: "Arnab Roy",
+    role: "Keyboardist",
+    photo: "src/assets/4.png", // Add Ranjit's photo here
+    description: "Rhythmic foundation of our ensemble",
+  },
+    {
+    name: "Sajal Halder",
+    role: "Guitarist",
+    photo: "src/assets/5.png", // Add Ranjit's photo here
     description: "Rhythmic foundation of our ensemble",
   },
 ];
@@ -51,10 +61,14 @@ const Team = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="bg-card border border-primary/30 rounded-lg p-6 hover-lift transition-all duration-300 group-hover:border-primary">
-                {/* Avatar Circle */}
+                {/* Photo Circle */}
                 <div className="relative mb-6">
-                  <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-primary/30 to-accent/30 border-4 border-primary/50 flex items-center justify-center group-hover:border-primary transition-all duration-300">
-                    <member.icon className="w-16 h-16 text-primary group-hover:scale-110 transition-transform" />
+                  <div className="w-32 h-32 mx-auto rounded-full border-4 border-primary/50 overflow-hidden group-hover:border-primary transition-all duration-300">
+                    <img
+                      src={member.photo}
+                      alt={`${member.name} - ${member.role}`}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
                   </div>
                   <div className="absolute inset-0 rounded-full border-glow opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>

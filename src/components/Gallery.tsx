@@ -1,12 +1,18 @@
 import { Image as ImageIcon } from "lucide-react";
+import photo1 from "@/assets/1.jpg";
+import photo2 from "@/assets/2.png";
+import photo3 from "@/assets/3.png";
+import photo4 from "@/assets/4.png";
+import photo5 from "@/assets/5.png";
+import photo6 from "@/assets/about.jpg";
 
 const galleryItems = [
-  { id: 1, span: "col-span-2 row-span-2" },
-  { id: 2, span: "col-span-1 row-span-1" },
-  { id: 3, span: "col-span-1 row-span-1" },
-  { id: 4, span: "col-span-1 row-span-2" },
-  { id: 5, span: "col-span-2 row-span-1" },
-  { id: 6, span: "col-span-1 row-span-1" },
+  { id: 1, span: "col-span-2 row-span-2", image: photo1, title: "Live Performance" },
+  { id: 2, span: "col-span-1 row-span-1", image: photo2, title: "Band Performance" },
+  { id: 3, span: "col-span-1 row-span-1", image: photo3, title: "On Stage" },
+  { id: 4, span: "col-span-1 row-span-2", image: photo4, title: "Concert Moment" },
+  { id: 5, span: "col-span-2 row-span-1", image: photo5, title: "Musical Evening" },
+  { id: 6, span: "col-span-1 row-span-1", image: photo6, title: "Behind the Scenes" },
 ];
 
 const Gallery = () => {
@@ -24,26 +30,26 @@ const Gallery = () => {
           <div className="w-24 h-1 bg-primary mx-auto mt-4" />
         </div>
 
-        {/* Masonry Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 auto-rows-[180px] sm:auto-rows-[200px]">
+        {/* Flexible Photo Boxes - Each box adapts to photo size */}
+        <div className="flex flex-wrap justify-center gap-4 lg:gap-6">
           {galleryItems.map((item, index) => (
             <div
               key={item.id}
-              className={`${item.span} group relative overflow-hidden rounded-lg border-2 border-primary/30 hover:border-primary transition-all duration-300 cursor-pointer hover-lift animate-fade-in`}
+              className="group inline-block rounded-lg border-2 border-primary/30 hover:border-primary transition-all duration-300 cursor-pointer hover-lift animate-fade-in overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Placeholder Content */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/10 to-primary/20 flex items-center justify-center">
-                <ImageIcon className="w-12 h-12 text-primary/40 group-hover:text-primary/60 transition-colors" />
-              </div>
-
-              {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <div className="text-center">
-                  <p className="text-primary font-display text-lg">Performance {item.id}</p>
-                  <p className="text-foreground/60 text-sm font-body mt-1">Click to view</p>
+              {/* Image Box - Takes exact photo dimensions */}
+              {item.image ? (
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="block max-w-full max-h-[200px] md:max-h-[250px] lg:max-h-[300px] h-auto w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                />
+              ) : (
+                <div className="w-64 h-48 bg-gradient-to-br from-primary/20 via-accent/10 to-primary/20 flex items-center justify-center">
+                  <ImageIcon className="w-12 h-12 text-primary/40 group-hover:text-primary/60 transition-colors" />
                 </div>
-              </div>
+              )}
 
               {/* Border Glow Effect */}
               <div className="absolute inset-0 border-glow opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
