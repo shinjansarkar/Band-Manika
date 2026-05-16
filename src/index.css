@@ -43,16 +43,16 @@ All colors MUST be HSL.
     --gold: 40 100% 75%;
     --gold-dark: 35 100% 45%;
     --warm-amber: 35 100% 65%;
-    
+
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(0, 0%, 5%) 0%, hsl(20, 100%, 15%) 100%);
     --gradient-glow: radial-gradient(circle, hsl(30, 100%, 50%, 0.3) 0%, transparent 70%);
-    
+
     /* Shadows with Golden Glow */
     --shadow-glow: 0 0 30px hsl(30, 100%, 50%, 0.5);
     --shadow-card: 0 10px 40px hsl(30, 100%, 50%, 0.2);
     --shadow-elegant: 0 5px 20px hsl(0, 0%, 0%, 0.5);
-    
+
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -73,20 +73,28 @@ All colors MUST be HSL.
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 600;
   }
 
   /* Mobile touch improvements */
-  button, a, [role="button"] {
+  button,
+  a,
+  [role="button"] {
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
   }
 
   /* Prevent horizontal scroll on mobile */
-  html, body {
+  html,
+  body {
     overflow-x: hidden;
   }
 
@@ -100,20 +108,20 @@ All colors MUST be HSL.
   .text-glow {
     text-shadow: 0 0 20px hsl(var(--primary) / 0.8), 0 0 40px hsl(var(--primary) / 0.4);
   }
-  
+
   .border-glow {
     box-shadow: 0 0 15px hsl(var(--primary) / 0.5);
   }
-  
+
   .hover-lift {
     transition: var(--transition-smooth);
   }
-  
+
   .hover-lift:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-glow);
   }
-  
+
   .folk-pattern {
     background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l5 15h15l-12 9 5 15-13-9-13 9 5-15-12-9h15z' fill='%23FF9900' fill-opacity='0.05'/%3E%3C/svg%3E");
   }

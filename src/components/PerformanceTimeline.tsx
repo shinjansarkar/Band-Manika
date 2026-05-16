@@ -47,7 +47,7 @@ const performances = [
 
 const PerformanceTimeline = () => {
   return (
-  <section id="performances" className="py-12 px-4 bg-secondary/50 relative overflow-hidden">
+    <section id="performances" className="py-12 px-4 bg-secondary/50 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 folk-pattern opacity-5" />
 
@@ -84,14 +84,13 @@ const PerformanceTimeline = () => {
                 </div>
 
                 {/* Content Card */}
-                  <div
-                    className={`mx-auto bg-card border ${
-                      event.highlight ? "border-primary border-2" : "border-primary/30"
+                <div
+                  className={`mx-auto bg-card border ${event.highlight ? "border-primary border-2" : "border-primary/30"
                     } rounded-lg p-4 md:p-6 hover-lift group w-full max-w-2xl`}
-                  >
+                >
                   <div className="flex items-center gap-3 mb-3">
-                      <Music className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
-                      <span className="text-2xl font-display font-bold text-primary">{event.year}</span>
+                    <Music className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
+                    <span className="text-2xl font-display font-bold text-primary">{event.year}</span>
                   </div>
 
                   <h3 className="text-xl font-display font-semibold text-foreground mb-2">

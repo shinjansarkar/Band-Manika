@@ -23,13 +23,13 @@ const teamMembers = [
     photo: "src/assets/3.png", // Add Ranjit's photo here
     description: "Rhythmic foundation of our ensemble",
   },
-    {
+  {
     name: "Arnab Roy",
     role: "Keyboardist",
     photo: "src/assets/4.png", // Add Ranjit's photo here
     description: "Rhythmic foundation of our ensemble",
   },
-    {
+  {
     name: "Sajal Halder",
     role: "Guitarist",
     photo: "src/assets/5.png", // Add Ranjit's photo here
@@ -39,7 +39,7 @@ const teamMembers = [
 
 const Team = () => {
   return (
-  <section id="team" className="py-12 px-4 relative overflow-hidden">
+    <section id="team" className="py-12 px-4 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 folk-pattern opacity-10" />
       <div className="absolute top-20 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />

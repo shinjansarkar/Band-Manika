@@ -30,7 +30,7 @@ const videos = [
     youtubeId: "BVAXqTzob8E",
     thumbnail: "https://img.youtube.com/vi/BVAXqTzob8E/maxresdefault.jpg",
   },
-];            
+];
 
 const Videos = () => {
   const [selectedVideo, setSelectedVideo] = useState(videos[0]);
@@ -40,14 +40,14 @@ const Videos = () => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
     };
-    
+
     checkMobile();
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
   return (
-  <section id="videos" className="py-12 px-4 relative overflow-hidden">
+    <section id="videos" className="py-12 px-4 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 folk-pattern opacity-10" />
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
@@ -123,11 +123,10 @@ const Videos = () => {
                   <div
                     key={video.id}
                     onClick={() => setSelectedVideo(video)}
-                    className={`group cursor-pointer transition-all duration-300 rounded-lg overflow-hidden ${
-                      selectedVideo.id === video.id
+                    className={`group cursor-pointer transition-all duration-300 rounded-lg overflow-hidden ${selectedVideo.id === video.id
                         ? "bg-primary/20 border-2 border-primary"
                         : "bg-secondary/50 border border-primary/20 hover:border-primary/50"
-                    }`}
+                      }`}
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <div className="flex gap-3 sm:gap-4 p-2 sm:p-3">

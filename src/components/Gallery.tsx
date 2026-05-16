@@ -1,10 +1,14 @@
 import { Image as ImageIcon } from "lucide-react";
 import photo1 from "@/assets/1.jpg";
-import photo2 from "@/assets/2.png";
+import photo2 from "@/assets/stage_1.png";
 import photo3 from "@/assets/3.png";
 import photo4 from "@/assets/4.png";
 import photo5 from "@/assets/5.png";
-import photo6 from "@/assets/about.jpg";
+// import photo6 from "@/assets/about.jpg";
+import photo7 from "@/assets/sidhu.png";
+import photo8 from "@/assets/nachiketa1.png";
+import photo9 from "@/assets/nachiketa2.png";
+import photo10 from "@/assets/7.png";
 
 const galleryItems = [
   { id: 1, span: "col-span-2 row-span-2", image: photo1, title: "Live Performance" },
@@ -12,7 +16,12 @@ const galleryItems = [
   { id: 3, span: "col-span-1 row-span-1", image: photo3, title: "On Stage" },
   { id: 4, span: "col-span-1 row-span-2", image: photo4, title: "Concert Moment" },
   { id: 5, span: "col-span-2 row-span-1", image: photo5, title: "Musical Evening" },
-  { id: 6, span: "col-span-1 row-span-1", image: photo6, title: "Behind the Scenes" },
+  // { id: 6, span: "col-span-1 row-span-1", image: photo6, title: "Behind the Scenes" },
+  { id: 7, span: "col-span-1 row-span-1", image: photo7, title: "Sidhu's Performance" },
+  { id: 8, span: "col-span-1 row-span-1", image: photo8, title: "Nachiketa Live" },
+  { id: 9, span: "col-span-1 row-span-1", image: photo9, title: "Nachiketa on Stage" },
+  { id: 10, span: "col-span-1 row-span-1", image: photo10, title: "Festival Moment" },
+
 ];
 
 const Gallery = () => {
