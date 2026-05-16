@@ -1,38 +1,45 @@
+import photo1 from "@/assets/image.png";
+import photo2 from "@/assets/1.jpg";
+import photo3 from "@/assets/2.png";
+import photo4 from "@/assets/3.png";
+import photo5 from "@/assets/4.png";
+import photo6 from "@/assets/5.png";
+
 const teamMembers = [
   {
     name: "Manika Chatterjee",
     role: "Lead Vocalist",
-    photo: "src/assets/image.png", // Add your photo here
+    photo: photo1,
     description: "Soulful voice that brings folk tales to life",
   },
   {
     name: "Sourav Sasmal",
     role: "Drummer",
-    photo: "src/assets/1.jpg", // Add Sourav's photo here
+    photo: photo2,
     description: "Master of traditional Bengali string instrument",
   },
   {
     name: "Soumya Som Roy",
     role: "Bass Guitarist",
-    photo: "src/assets/2.png", // Add Sudipta's photo here
+    photo: photo3,
     description: "Versatile musician with deep folk roots",
   },
   {
     name: "Pritam Pandit",
     role: "Tabla",
-    photo: "src/assets/3.png", // Add Ranjit's photo here
+    photo: photo4,
     description: "Rhythmic foundation of our ensemble",
   },
   {
     name: "Arnab Roy",
     role: "Keyboardist",
-    photo: "src/assets/4.png", // Add Ranjit's photo here
+    photo: photo5,
     description: "Rhythmic foundation of our ensemble",
   },
   {
     name: "Sajal Halder",
     role: "Guitarist",
-    photo: "src/assets/5.png", // Add Ranjit's photo here
+    photo: photo6,
     description: "Rhythmic foundation of our ensemble",
   },
 ];
