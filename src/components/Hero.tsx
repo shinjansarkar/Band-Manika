@@ -1,6 +1,6 @@
 import { Music, Play, Star, Sparkles, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-bg.webp";
 
 const Hero = () => {
   return (

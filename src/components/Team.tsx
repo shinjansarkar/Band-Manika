@@ -1,10 +1,9 @@
-import photo1 from "@/assets/image.png";
-import photo2 from "@/assets/1.jpg";
-import photo3 from "@/assets/2.png";
-import photo4 from "@/assets/3.png";
-import photo5 from "@/assets/4.png";
-import photo6 from "@/assets/5.png";
-
+import photo1 from "@/assets/image.webp";
+import photo2 from "@/assets/1.webp";
+import photo3 from "@/assets/2.webp";
+import photo4 from "@/assets/3.webp";
+import photo5 from "@/assets/4.webp";
+import photo6 from "@/assets/5.webp";
 const teamMembers = [
   {
     name: "Manika Chatterjee",

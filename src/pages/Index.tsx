@@ -5,6 +5,7 @@ import PerformanceTimeline from "@/components/PerformanceTimeline";
 import Team from "@/components/Team";
 import Gallery from "@/components/Gallery";
 import Videos from "@/components/Videos";
+import LivePerformances from "@/components/LivePerformances";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -17,6 +18,7 @@ const Index = () => {
       <PerformanceTimeline />
       <Team />
       <Gallery />
+      <LivePerformances />
       <Videos />
       <Contact />
       <Footer />

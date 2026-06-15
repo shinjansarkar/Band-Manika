@@ -1,14 +1,14 @@
 import { Image as ImageIcon } from "lucide-react";
-import photo1 from "@/assets/1.jpg";
-import photo2 from "@/assets/stage_1.png";
-import photo3 from "@/assets/3.png";
-import photo4 from "@/assets/4.png";
-import photo5 from "@/assets/5.png";
+import photo1 from "@/assets/1.webp";
+import photo2 from "@/assets/stage_1.webp";
+import photo3 from "@/assets/3.webp";
+import photo4 from "@/assets/4.webp";
+import photo5 from "@/assets/5.webp";
 // import photo6 from "@/assets/about.jpg";
-import photo7 from "@/assets/sidhu.png";
-import photo8 from "@/assets/nachiketa1.png";
-import photo9 from "@/assets/nachiketa2.png";
-import photo10 from "@/assets/7.png";
+import photo7 from "@/assets/sidhu.webp";
+import photo8 from "@/assets/nachiketa1.webp";
+import photo9 from "@/assets/nachiketa2.webp";
+import photo10 from "@/assets/7.webp";
 
 const galleryItems = [
   { id: 1, span: "col-span-2 row-span-2", image: photo1, title: "Live Performance" },
